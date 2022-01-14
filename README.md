@@ -21,7 +21,7 @@ Make a copy of the `example.com.env` file and rename it to your TLD but keep the
 
 Edit the config file to your liking, Check below for what each setting does
 
-Make sure you have node/npm installed on your system, Don't forget to run `npm init`
+Make sure you have node/npm installed on your system, Don't forget to run `npm i`
 
 ### Config keys/settings and their meanings
 
