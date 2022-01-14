@@ -2,7 +2,7 @@ const path = require('path')
 const cron = require('cron')
 
 try {
-    const env = process.argv.slice(2)[0].split('env=')[1]
+    const env = process.argv.slice(2)[0].split('tld=')[1]
 
     require('dotenv').config({
         path: path.join(process.cwd(), `/${env}.env`)

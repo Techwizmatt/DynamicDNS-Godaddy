@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "example": "node app.js env=example.com"
   },
   "author": "",
   "license": "ISC",
