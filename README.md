@@ -1,6 +1,6 @@
-#Dynamic DNS | GoDaddy
+# Dynamic DNS | GoDaddy
 
-###What is this application?
+### What is this application?
 
 This application will take the current Hostnames (subdomain) in the machine and the configuration file for the tld and make sure the subdomain matches to the IP provided
 
@@ -21,7 +21,7 @@ Make a copy of the `example.com.env` file and rename it to your TLD but keep the
 
 Edit the config file to your liking, Check below for what each setting does
 
-###Config keys/settings and their meanings
+### Config keys/settings and their meanings
 
 `TLD` is your top level domain, I recommend settings this to the file name of your config '.env' file.
 
