@@ -1,0 +1,17 @@
+{
+  "name": "godaddydynamicdns",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cron": "^1.8.2",
+    "dotenv": "^11.0.0",
+    "path": "^0.12.7"
+  }
+}
