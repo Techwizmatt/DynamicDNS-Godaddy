@@ -8,7 +8,7 @@ try {
         path: path.join(process.cwd(), `/${env}.env`)
     })
 } catch (e) {
-    console.error('Missing "env=" flag within execution')
+    console.error('Missing "tld=" flag within execution')
     process.exit(1)
 }
 
