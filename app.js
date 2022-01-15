@@ -20,14 +20,11 @@ const job = new cron.CronJob('0 0 * * * *', function () {
 
         libraries.godaddy.doUpdateAddressRecord(process.env.TLD, record, host).then(_ => {
             console.log(`Successfully updated FQDN ${record}.${process.env.TLD} to point to ${host}`)
-            return true
         }).catch(error => {
             console.log(error)
-            return false
         })
     }).catch(error => {
         console.log(error)
-        return false
     })
 }, null, null, null, null, true)
 
