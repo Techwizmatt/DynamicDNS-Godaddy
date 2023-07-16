@@ -16,7 +16,13 @@ const libraries = require(path.join(process.cwd(), '/libraries'))
 
 const job = new cron.CronJob('0 0 * * * *', function () {
     libraries.network.doGetPublicAddress().then(host => {
-        const record = (process.env.USE_HOSTNAME === 'false') ? '@' : libraries.hostname.doGetSubdomain()
+        let record = (process.env.USE_HOSTNAME === 'false') ? '@' : libraries.hostname.doGetSubdomain()
+
+        if (process.env.CUSTOM_SUBDOMAIN !== 'false') {
+            record = process.env.CUSTOM_SUBDOMAIN
+        }
+
+        console.log(`Processing ${record}.${process.env.TLD}`)
 
         libraries.godaddy.doUpdateAddressRecord(process.env.TLD, record, host).then(_ => {
             console.log(`Successfully updated FQDN ${record}.${process.env.TLD} to point to ${host}`)
